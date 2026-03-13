@@ -1,0 +1,18 @@
+# Ignore the dataset folder (Keep large CSVs out of GitHub)
+data/*.csv
+
+# Ignore Python's temporary cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
