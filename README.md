@@ -6,10 +6,52 @@ This project compares **Sequential** and **Parallel** data processing using a la
 ## Problem Description
 The primary challenge of this project is to efficiently process a large-scale dataset containing over 1.7 million records of COVID-19 cases and deaths. Analyzing such a high volume of data on a single CPU core can become a bottleneck as the dataset grows, leading to slower execution times. To address this, the project explores the implementation of a MapReduce architecture using Python's multiprocessing library. The goal is to determine if distributing data operations, specifically Filtering, Aggregation, and Sorting, across multiple CPU cores provides a significant speed advantage over a traditional sequential approach. This experiment serves to identify the "break-even point" where the complexity of parallel coordination becomes more efficient than single-core processing.
 
-## Dataset
+## Tools and Technologies used
 * **Source:** [COVID-19 Deaths Dataset (Kaggle)](https://www.kaggle.com/datasets/dhruvildave/covid19-deaths-dataset)
 * **File:** `us-counties.csv` (~104 MB)
 * **Records:** 1,774,204 rows
+* **Python 3.12:** The core programming language used for scripting the analytical logic.
+* **Pandas:** Utilized for high-performance data manipulation, specifically for reading the 104MB CSV and performing vectorized filtering and aggregation.
+* **Multiprocessing (Python Standard Library):** The primary library used to implement the MapReduce pattern and manage child processes.
+* **NumPy:** Used for efficient array splitting and numerical operations.
+* **Jupyter Notebook (VS Code):** The integrated development environment used for interactive coding, visualization, and documentation.
+* **Git & GitHub:** Used for version control, following an atomic commit workflow to track project milestones.
+* **Google Sheets:** For the performance comparison table.
+* **ChatGPT and GEMINI AI:** For overall assistance in development and writing.
+
+## Instructions for running the Project
+**1. Ensure you have Python 3.10+ installed. It is recommended to use a virtual environment to manage dependencies.**
+   
+**2. Clone the Repository**
+   ```
+   git clone https://github.com/your-username/pdc-project-lipata-wilmar-g.gitcd pdc-project-lipata-wilmar-g
+   ```
+   
+**3. Set Up Virtual Environment**
+   ```
+   python -m venv .venv
+   ```
+   On Windows:
+   
+       .venv\Scripts\activate
+   On macOS/Linux:
+   
+       source .venv/bin/activate
+   
+**4. Install Dependencies**
+   ```
+   pip install pandas notebook
+   ```
+   
+**5. Prepare the Data**
+    - Download the us-counties.csv from the Kaggle source.
+    - Place the file inside the data/ folder of the project.
+    
+**6. Run the Notebook**
+   ```
+   jupyter notebook notebooks/main.ipynb
+   ```
+
 
 ## Implementation Results
 
